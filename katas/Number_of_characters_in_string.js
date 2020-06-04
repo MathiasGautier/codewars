@@ -13,7 +13,9 @@ function res(string) {
     return count
 }
 
-
+// char.forEach((letter)=>{  <-------------same result as the for loop
+//     !count[letter] ? count[letter] = 1 :
+//     count[letter] += 1
 
 
 

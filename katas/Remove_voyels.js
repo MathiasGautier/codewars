@@ -8,11 +8,15 @@
 
 // Note: for this kata y isn't considered a vowel.
 
-function disemvowel(str) {
-    str=str.split('');
-    return (str.filter(function(letters) {
-   if((letters !=="a")&&(letters!=="e")&&(letters!=="i")&&(letters!=="o")&&(letters!=="u")
-     &&(letters !=="A")&&(letters!=="E")&&(letters!=="I")&&(letters!=="O")&&(letters!=="U")){
-     return letters;}
-  })).join('');
-  }
+// function disemvowel(str) {
+//     str=str.split('');
+//     return (str.filter(function(letters) {
+//    if((letters !=="a")&&(letters!=="e")&&(letters!=="i")&&(letters!=="o")&&(letters!=="u")
+//      &&(letters !=="A")&&(letters!=="E")&&(letters!=="I")&&(letters!=="O")&&(letters!=="U")){
+//      return letters;}
+//   })).join('');
+//   }
+
+const disemvowel = (str => str.split('').filter(letter => "aeiou".includes(letter.toLowerCase()) ? '' : letter).join(''));
+
+console.log(disemvowel("My nAme iS MathiAs"))

@@ -7,3 +7,11 @@ function isPangram(string){
       let alphabet = ("abcdefghijklmnopqrstuvwxyz").split('');
     return alphabet.every(x=> string.toLowerCase().includes(x))
   }
+
+const isPangramTwo=(str)=>{
+    const alph="abcdefghijklmnopqrstuvwxyz".split('');
+    const arrStr=str.toLowerCase().split('').filter(x=>x!==" " && x!==".");
+
+   //check  if there are more than one letter from the alphabet missing
+  return alph.filter(e=>!arrStr.includes(e)).length===0?true:false
+}
